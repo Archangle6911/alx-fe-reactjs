@@ -1,16 +1,35 @@
-import React, { useContext } from 'react'; // Import useContext from React
-import UserContext from './UserContext';    // Import the UserContext
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-function UserProfile() {
-  // Use useContext to access the data from UserContext
-  const userData = useContext(UserContext);
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <div style={{ padding: '20px', border: '1px solid #ccc', margin: '10px' }}>
-      <h2>{userData.name}</h2>
-      <p>Email: {userData.email}</p>
-    </div>
-  );
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default UserProfile;
+export default App
