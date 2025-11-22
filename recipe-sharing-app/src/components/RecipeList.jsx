@@ -1,6 +1,6 @@
  // RecipeList component
 import React from 'react';
-import { link } fom 'react-router-dom';
+import { link } from 'react-router-dom';
 import { userRecipeStore } from  "../components/recipeStore.js";
   import { useRecipeStore } from './recipeStore';
 
