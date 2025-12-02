@@ -13,7 +13,7 @@ function HomePage() {
   return (
     <div className="container mx-auto p.4">
     <h1 className="text-3x1  font-bold text-center mb-6">Recipe Sharing  Platform</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {recipes.map(recipe) => (
         <Link to={`/recipe/${recipe.id}`} key={recipe.id} className="bg-white rounded-lg shadow-ms hover:shadow-lg transition-shadow duration-300 ease-in-out">
         <img src={recipe.image} alt={recipe.title} className="rounded-lg w-full h-48 object-cover" />
